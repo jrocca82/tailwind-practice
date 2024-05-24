@@ -1,40 +1,43 @@
-import { Suspense } from "react";
-
-import { api } from "~/trpc/server";
-import { AuthShowcase } from "./_components/auth-showcase";
-import {
-  CreatePostForm,
-  PostCardSkeleton,
-  PostList,
-} from "./_components/posts";
+import CardComponent from "./_components/Card";
 
 export const runtime = "edge";
 
 export default function HomePage() {
-  // You can await this here if you don't want to show Suspense fallback below
-  const posts = api.post.all();
-
   return (
     <main className="container h-screen py-16">
       <div className="flex flex-col items-center justify-center gap-4">
-        <h1 className="text-5xl font-extrabold tracking-tight sm:text-[5rem]">
-          Create <span className="text-primary">T3</span> Turbo
-        </h1>
-        <AuthShowcase />
-
-        <CreatePostForm />
-        <div className="w-full max-w-2xl overflow-y-scroll">
-          <Suspense
-            fallback={
-              <div className="flex w-full flex-col gap-4">
-                <PostCardSkeleton />
-                <PostCardSkeleton />
-                <PostCardSkeleton />
-              </div>
-            }
-          >
-            <PostList posts={posts} />
-          </Suspense>
+        <h1>Tailwind is Cooooool</h1>
+        <div className="flex w-full justify-center gap-10 overflow-x-scroll align-middle">
+          <CardComponent
+            imageUrl="/butterfly-cat.jpg"
+            headerText="Hey mama"
+            descriptionText="This is a description of my image. Isn't it bootiful"
+            buttonText="Click me daddy"
+          />
+          <CardComponent
+            imageUrl="/orange-cat.jpg"
+            headerText="Hey mama"
+            descriptionText="This is a description of my image. Isn't it bootiful"
+            buttonText="Click me daddy"
+          />
+          <CardComponent
+            imageUrl="/peekaboo-cat.jpg"
+            headerText="Hey mama"
+            descriptionText="This is a description of my image. Isn't it bootiful"
+            buttonText="Click me daddy"
+          />
+          <CardComponent
+            imageUrl="/sunglasses-cat.jpg"
+            headerText="Hey mama"
+            descriptionText="This is a description of my image. Isn't it bootiful"
+            buttonText="Click me daddy"
+          />
+          <CardComponent
+            imageUrl="/under-blanket-cat.jpg"
+            headerText="Hey mama"
+            descriptionText="This is a description of my image. Isn't it bootiful"
+            buttonText="Click me daddy"
+          />
         </div>
       </div>
     </main>

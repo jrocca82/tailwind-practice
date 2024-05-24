@@ -4,16 +4,24 @@ import { fontFamily } from "tailwindcss/defaultTheme";
 import baseConfig from "@acme/tailwind-config/web";
 
 export default {
-  // We need to append the path to the UI package to the content array so that
-  // those classes are included correctly.
   content: [...baseConfig.content, "../../packages/ui/**/*.{ts,tsx}"],
   presets: [baseConfig],
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+  ],
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-geist-sans)", ...fontFamily.sans],
-        mono: ["var(--font-geist-mono)", ...fontFamily.mono],
+        sans: ["Rubik", ...fontFamily.sans],
+        mono: ["Rubik", ...fontFamily.mono],
       },
+      colors: {
+        'card': '#D7EBBA', // Light green
+        'card-foreground': '#472836', // Dark maroon
+        'primary': '#EBD494', // Beige
+        'primary-foreground': '#472836', // Dark maroon
+        'accent': '#9AD2CB' // Teal-ish
+      }
     },
   },
 } satisfies Config;
