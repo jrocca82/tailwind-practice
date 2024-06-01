@@ -12,15 +12,15 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Rubik", ...fontFamily.sans],
-        mono: ["Rubik", ...fontFamily.mono],
+        sans: ["Poppins", ...fontFamily.sans],
+        serif: ["Lora", ...fontFamily.serif],
+        mono: ["Tangerine", ...fontFamily.mono]
       },
       colors: {
-        'card': '#D7EBBA', // Light green
-        'card-foreground': '#472836', // Dark maroon
-        'primary': '#EBD494', // Beige
-        'primary-foreground': '#472836', // Dark maroon
-        'accent': '#9AD2CB' // Teal-ish
+        'primary': '#9966CC',
+        'secondary': '#76E0D5',
+        'accent': '#FFAB96',
+        "white": "#FFF3DE"
       }
     },
   },

@@ -9,7 +9,9 @@
     },
     "plugins": [{ "name": "next" }],
     "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json",
-    "module": "esnext"
+    "module": "esnext",
+    "strict": true, // Ensuring strict mode is beneficial for catching errors
+    "noImplicitAny": true // Prevents variables from defaulting to `any`
   },
   "include": [".", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]

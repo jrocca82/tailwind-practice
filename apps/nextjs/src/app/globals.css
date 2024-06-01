@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,56 +8,51 @@
 
 @layer base {
   :root {
-    --background: 168 50% 65%; /* Teal-ish background */
-    --foreground: 345 27% 22%; /* Dark maroon text */
-    --card: 80 60% 83%; /* Light green cards */
-    --card-foreground: 345 27% 22%; /* Dark maroon text on cards */
-    --popover: 60 100% 87%; /* Light yellow popovers */
-    --popover-foreground: 345 27% 22%; /* Dark maroon text on popovers */
-    --primary: 45 73% 75%; /* Beige as primary interface color */
-    --primary-foreground: 345 27% 22%; /* Dark maroon text for primary areas */
-    --secondary: 168 50% 65%; /* Secondary color, reuse teal */
-    --secondary-foreground: 345 27% 22%; /* Dark maroon text for secondary areas */
-    --muted: 80 60% 83%; /* Light green for muted elements */
-    --muted-foreground: 345 27% 22%; /* Dark maroon for muted text */
-    --accent: 60 100% 87%; /* Light yellow for accents */
-    --accent-foreground: 345 27% 22%; /* Dark maroon for accent text */
-    --destructive: 345 27% 22%; /* Dark maroon for destructive actions */
-    --destructive-foreground: 168 50% 65%; /* Teal-ish text for destructive buttons */
-    --border: 45 73% 75%; /* Beige borders */
-    --input: 80 60% 83%; /* Light green inputs */
-    --ring: 60 100% 87%; /* Light yellow focus rings */
+    --background: 175 53% 77%; /* New Aqua (#76E0D5) background */
+    --foreground: 272 40% 60%; /* Mystic Amethyst for all text */
+    --card: 37 100% 93%; /* New Pearl White (#FFF3DE) cards */
+    --card-foreground: 272 40% 60%; /* Mystic Amethyst text on cards */
+    --popover: 37 100% 93%; /* New Pearl White (#FFF3DE) popovers */
+    --popover-foreground: 272 40% 60%; /* Mystic Amethyst text on popovers */
+    --primary: 175 53% 77%; /* New Aqua (#76E0D5) as primary interface color */
+    --primary-foreground: 272 40% 60%; /* Mystic Amethyst text for primary areas */
+    --secondary: 272 40% 60%; /* Mystic Amethyst as secondary color */
+    --secondary-foreground: 37 100% 93%; /* New Pearl White (#FFF3DE) text for secondary areas */
+    --muted: 175 53% 90%; /* Lighter New Aqua (#76E0D5) for muted elements */
+    --muted-foreground: 272 40% 60%; /* Mystic Amethyst for muted text */
+    --accent: 0 59% 68%; /* Warm Coral (#FFAB96) for accents */
+    --accent-foreground: 272 40% 60%; /* Mystic Amethyst for accent text */
+    --destructive: 272 40% 60%; /* Mystic Amethyst for destructive actions */
+    --destructive-foreground: 37 100% 93%; /* New Pearl White (#FFF3DE) text for destructive buttons */
+    --border: 0 59% 68%; /* Warm Coral (#FFAB96) borders */
+    --input: 175 53% 90%; /* Light New Aqua (#76E0D5) inputs */
+    --ring: 0 59% 68%; /* Warm Coral (#FFAB96) focus rings */
     --radius: 0.5rem; /* Border-radius */
-  }
-
-  .dark {
-    --background: 345 27% 22%; /* Dark maroon background */
-    --foreground: 168 50% 65%; /* Teal-ish text */
-    --card: 345 27% 22%; /* Dark maroon cards */
-    --card-foreground: 168 50% 65%; /* Teal-ish text on dark cards */
-    --popover: 345 27% 22%; /* Dark maroon popovers */
-    --popover-foreground: 168 50% 65%; /* Teal-ish text on dark popovers */
-    --primary: 45 73% 75%; /* Beige for dark primary */
-    --primary-foreground: 168 50% 65%; /* Teal-ish for dark primary text */
-    --secondary: 345 27% 22%; /* Dark maroon for dark secondary */
-    --secondary-foreground: 168 50% 65%; /* Teal-ish for dark secondary text */
-    --muted: 345 27% 22%; /* Dark maroon for dark muted elements */
-    --muted-foreground: 168 50% 65%; /* Teal-ish for dark muted text */
-    --accent: 345 27% 22%; /* Dark maroon for dark accents */
-    --accent-foreground: 168 50% 65%; /* Teal-ish for dark accent text */
-    --destructive: 168 50% 65%; /* Teal-ish for dark destructive actions */
-    --destructive-foreground: 345 27% 22%; /* Dark maroon text for dark destructive */
-    --border: 45 73% 75%; /* Beige borders in dark mode */
-    --input: 345 27% 22%; /* Dark maroon inputs in dark mode */
-    --ring: 345 27% 22%; /* Dark maroon focus rings in dark mode */
   }
 }
 
 h1 {
+  font-size: 48px;
+  font-family: "Tangerine";
+}
+
+h2 {
   font-size: 36px;
+  font-family: "Tangerine";
+}
+
+h3 {
+  font-size: 24px;
+}
+
+p {
+  font-family: "Lora";
 }
 
 button {
-  background-color: var(--primary);
+  background-color: var(--background);
+  color: var(--background);
   padding: 20px;
+  border: none;
+  transition: transform 0.3s ease;
 }
